@@ -1,6 +1,9 @@
 # Machine Learning with Earth Observation data: Case studies with Semantic Segmentation and Regression
 Material for 2021 UN Open GIS Challenge 1 - Training on Satellite Data Analysis and Machine Learning with QGIS (Satellite_QGIS)
 
+![Challenge](./source/_static/header_fig.png?raw=true "UN OSGeo Challenge")
+
+
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This work is licensed under a
