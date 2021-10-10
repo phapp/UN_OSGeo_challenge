@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "osgeoc"
+version = "0.1.0"
+description = "OSGeo Challenge 2021"
+authors = ["Patrick Happ <patrick.happ@gmail.com>"]
+license = "Apache"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+Sphinx = "^4.1.2"
+furo = "^2021.8.11-beta.42"
+myst-parser = "^0.15.1"
+sphinx-copybutton = "^0.4.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
