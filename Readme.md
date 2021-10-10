@@ -1,3 +1,6 @@
+# Machine Learning with Earth Observation data: Case studies with Semantic Segmentation and Regression
+Material for 2021 UN Open GIS Challenge 1 - Training on Satellite Data Analysis and Machine Learning with QGIS (Satellite_QGIS)
+
 # Instructions
 
 ## Using Poetry Python
