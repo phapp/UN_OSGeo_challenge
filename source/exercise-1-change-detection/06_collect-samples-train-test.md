@@ -108,6 +108,11 @@ In the **New Shapefile Layer** window, select the following parameters:
 - In the **New Field** section, add the **Class** field to store the classes names. Then, click on **Add to Fields List**.
 - Finally, click on **OK**.
 
+
+:::{important}
+Create this layer only in **ESRI Shafile format (SHP extension)**, because the **dzetsaka plugin** only works with this format.
+:::
+
 So, an empty vector layer has been added to our project.
 
 ```{eval-rst}

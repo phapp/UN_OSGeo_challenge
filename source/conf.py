@@ -60,7 +60,6 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'furo'
-
 html_theme_options = {
     "light_css_variables": {
         "color-brand-primary": "#343A40"
@@ -70,6 +69,7 @@ html_theme_options = {
         "color-brand-content": "#bb86fc",
     },
 }
+html_css_files = ['custom.css']
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -2,7 +2,7 @@
 
 In this tutorial, we have learnt how to perform a linear regression to obtain a deforestation trend based on NDVI historical data in a region of interest.
 
-It was applied to monitor the deforestation trends in the municipality São Félix do Xingu (Brazil). The images were from the satellite Landsat 8, acquired from 2017 to 2020 using the Google Earth Engine plugin for QGIS.
+It was applied to monitor the deforestation trends in the municipality São Félix do Xingu (Brazil). The images were from the satellite Landsat 8, acquired from 2017 to 2021 using the Google Earth Engine plugin for QGIS.
 
 The main topics explained in the tutorial are the following:
 

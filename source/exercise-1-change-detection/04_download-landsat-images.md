@@ -29,7 +29,7 @@ The region of interest is defined by the **UL** (_Upper Left_) and **LR** (_Lowe
 ```{eval-rst}
 .. figure:: ../_static/img_ex1/7_UL_LR.png
   :name: ul-lr
-  :width: 200px
+  :width: 250px
 ```
 
 To define these coordinates in SCP, click on **_Set area in the map_**:
@@ -82,6 +82,12 @@ Now, we can see the results of our search. In this case, there was only one imag
   :name: scp-2021-07-15
   :width: 800px
 ```
+
+:::{caution}
+If this image is not available in SCP, you can download it from our data repository in Zenodo: [link](https://zenodo.org/record/5507081#.YVZKqtD0mUk) or you can work with a different available image (it may be necessary to increase *the max cloud cover* parameter).
+
+Apparently, there were some changes in SCP during the development of this material, or there is a temporary bug, that may result in different search results. Even if this image exists in the [USGS Earth Explorer repository](https://earthexplorer.usgs.gov/), it may not appear in the SCP search results.
+:::
 
 It is possible to see a preview of the image over the region of interest. Just click on the button **Display preview of highlighted images in map**.
 

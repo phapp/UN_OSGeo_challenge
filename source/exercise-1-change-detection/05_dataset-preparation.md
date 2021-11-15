@@ -154,19 +154,27 @@ The image from 2016 is an exception as it was the only date without clouds in th
 Notice that all images have the same **Zone** and **Row**, because they cover exactly the same area.
 :::
 
-Then, we need to repeat the last steps to download, clip and pre-process all Landsat 8 products.
+Then, we need to repeat the last steps to download, clip and pre-process all Landsat 8 products:
 
-:::{tip}
-To _**Download Images**_ for each date, it is only necessary to change the **date**, and in some cases, the **cloud cover**. The other parameters are the same: **UL** and **LR** coordinates, and **Products**.
+* To download more images, go to **SCP->Download Products**. It is only necessary to change some parameters like **Date from/to**, and in some cases, the **Max cloud cover (%)**. The other parameters are the same: **UL** and **LR** coordinates, and **Products**. Finally, click on **Run**.
 
-For the _**Band Set**_ definition, load only the bands corresponding to a certain date. Then, refresh the list to create a new band set.
+:::{important}
+Remember to clear the list with the results of the search by clicking on the button **Reset** before downloading an image from another date.
 
-For _**Clipping**_ all bands, just click directly on the **Run** button, as all parameters are the same for all dates.
-
-To perform the _**Pre-processing**_, remember to change the folder with _all clipped bands_ and its corresponding _MTL file_.
+```{eval-rst}
+.. figure:: ../_static/img_ex1/25_scp_reset_list.PNG
+  :name: scp-reset-list
+  :width: 50px
+```
 :::
 
-Finally, the working directory will have the following structure:
+* Before **Clipping**, remember to define a _**Band Set**_ with the downloaded bands. Go to **SCP->Band set**. Then, click on **Refresh** the list and **Add** the corresponding bands to create a new band set.
+
+* For **Clipping** all bands, go to **SCP->Preprocessing->Clip multiple rasters**. Select the _**Band set**_ created in the previous step, and the coordinates. Remember to change the **CRS** of the project to the **CRS** of the bands. Finally, click on **Run**.
+
+* To perform the **Pre-processing** of all clipped bands, go to **SCP->Preprocessing->Landsat**. Then, select the folder with _all clipped bands_ and its corresponding _MTL file_. Finally, click on **Run**.
+
+After executing these steps, the working directory will have the following structure:
 
 ```{literalinclude} ../_static/ex1_clip_preprocess.txt
 ---

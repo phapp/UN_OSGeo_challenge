@@ -35,6 +35,17 @@ Finally, the images are added to the project.
   :width: 800px
   :name: sentinel2-images
 ```
+
+The available dates close to the ones employed for Landsat images are:
+
+| Product Level |    Date    |        Zone/Path       |
+|:-------------:|:----------:|:----------------------:|
+|      L2A      | 2020-07-27 | 18LTQ,18LTR,17RK,17LRL |
+|      L2A      | 2019-07-03 | 18LTQ,18LTR,17RK,17LRL |
+|      L2A      | 2018-07-28 | 18LTQ,18LTR,17RK,17LRL |
+|      L2A      | 2017-07-03 | 18LTQ,18LTR,17RK,17LRL |
+|      L2A      | 2016-07-28 | 18LTQ,18LTR,17RK,17LRL |
+
 ## Pre-processing
 
 As **Sentinel-2** _Level 1C_ images were downloaded, it is necessary to perform the atmospheric correction. Then, go to **SCP->Preprocessing->Sentinel-2**.
@@ -55,4 +66,10 @@ After some minutes, the pre-processed bands are added to the project with the pr
 It is recommended to perform the _DOS1 atmospheric correction_ for the entire image (before clipping the image) in order to improve the calculation of parameters based on the image.
 :::
 
-Repeat the same procedure for all **Sentinel-2** images downloaded.
+Repeat the same procedure for all **Sentinel-2** images downloaded. 
+
+:::{important}
+Remember that Sentinel-2 bands have different spatial resolutions: 10m, 20m, and 60m. So, it would be necessary to pre-process them separately by each spatial resolution.
+
+However, SCP takes care of it by performing a resampling of all bands to uniform the spatial resolutions. SCP resamples all bands to the band with the highest spatial resolution, in this case, 10m.
+:::

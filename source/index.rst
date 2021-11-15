@@ -28,6 +28,8 @@ For Exercise 1, the `Semi-Automatic Classification Plugin (SCP) 7.9.7 <https://f
 
 For Exercise 2, the `GEE Timeseries Explorer 1.1 <https://geetimeseriesexplorer.readthedocs.io/en/latest/>`_ and `Google Earth Engine <https://gee-community.github.io/qgis-earthengine-plugin/>`_ were used.
 
+The development of this tutorial was presented in the `FOSS4G 2021 Buenos Aires <https://callforpapers.2021.foss4g.org/foss4g2021/talk/DBJQXS/>`_.
+
 Exercise 1
 ==========
 

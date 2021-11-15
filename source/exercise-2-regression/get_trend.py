@@ -34,3 +34,16 @@ Map.addLayer(trend.clip(polygon_ee).select(["scale"]),
               "palette": ["#ff0000", "#ffffbf", "#21ff8e"]},
               "NDVI variation"
              )
+
+binary_deforestation = trend.select(["scale"]).lt(0)
+deforestation = binary_deforestation.eq(1)
+areaImage = deforestation.multiply(ee.Image.pixelArea())
+area = areaImage\
+        .reduceRegion(reducer = ee.Reducer.sum(),\
+                      geometry = polygon_ee,\
+                      crs = 'EPSG:31982',\
+                      scale=30,\
+                      bestEffort = True)
+area_m2 = area.getInfo()['scale']
+area_km2 = area_m2/1e6
+print(f"Deforested area: {area_km2:,.0f} (km^2)")

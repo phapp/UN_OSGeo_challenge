@@ -79,7 +79,7 @@ To use it, we need to import **Map** from **ee_plugin**:
 from ee_plugin import Map
 ```
 
-For example, the **Landsat8** variable contains the image collection that covers our region of interest from 2017 to 2020.
+For example, the **Landsat8** variable contains the image collection that covers our region of interest from 2017 to 2021.
 
 ```{literalinclude} get_trend.py
 ---
@@ -108,6 +108,79 @@ lines: 32-36
 ```{eval-rst}
 .. figure:: ../_static/img_ex2/lr_roi.png
   :width: 600px
+```
+
+## Deforested area
+
+We can take the negatives slope (`scale` in GEE) values in the NDVI variation as deforestation.
+
+```{literalinclude} get_trend.py
+---
+language: python
+lines: 38-39
+---
+```
+
+```{tip}
+Image operators like **lt** (lower than) and **eq** (equal) are useful.
+
+`lt` **with threshold value of zero** let us to create a binary result where:
+- **1** is for negative slopes
+- **0** is for zero or positive slopes
+
+`eq` is used to select the negative slopes.
+```
+
+With the deforested regions, we need to express the pixels as areas. We can achieve this with the [pixelArea function](https://developers.google.com/earth-engine/apidocs/ee-image-pixelarea) that get the value of each pixel in square meters.
+
+```{literalinclude} get_trend.py
+---
+language: python
+lines: 40
+---
+```
+
+Then, to estimate the area, we can use [`reduceRegion`](https://developers.google.com/earth-engine/apidocs/ee-image-reduceregion) to apply the [sum reducer](https://developers.google.com/earth-engine/apidocs/ee-reducer-sum) to measure the deforested area, taking in consideration:
+
+- The projection of our region of interest (**crs**), for São Félix do Xingu is [**EPSG:31982**](https://epsg.io/31982)
+- **bestEffort** parameter as True, since our region of interest contains many pixels (the python console provided a message if this is the case).
+
+```{literalinclude} get_trend.py
+---
+language: python
+lines: 41-46
+---
+```
+
+```{caution}
+This stage can take some time (when testing, it took around 2:30 minutes) to receive the response from GEE.
+```
+
+After the response is received from GEE, we can extract the area value using the `getInfo` function and the **inherited band** `scale`:
+
+```{literalinclude} get_trend.py
+---
+language: python
+lines: 47
+---
+```
+
+Then, we can convert the square meters into square kilometers:
+
+```{literalinclude} get_trend.py
+---
+language: python
+lines: 48
+---
+```
+
+Finally, we can express the area in thousands square kilometers:
+
+```{literalinclude} get_trend.py
+---
+language: python
+lines: 49
+---
 ```
 
 In summary, the final code used is:

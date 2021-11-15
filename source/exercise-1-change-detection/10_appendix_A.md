@@ -21,10 +21,14 @@ Select any of the images in the list and click on the button **Display preview o
   :width: 600px
   :name: preview-download-sentinel-1
 ```
-Finally, click on the button **Run** to download the previewed images. You will be asked to select a directory to download the products. Let's use the folder **Images**.
+Finally, disable the option _**Preprocess images**_, and click on the button **Run** to download the previewed images. You will be asked to select a directory to download the products. Let's use the folder **Images**.
 
 :::{important}
 Sentinel-1 bands are bigger than Landsat 8, so this step would take several minutes, depending on your internet connection.
+:::
+
+:::{important}
+Pre-processing of Sentinel-1 images could be performed automatically at this step by enabling the option _**Preprocess images**_. However, we disabled it to explain this step in detail.
 :::
 
 ## Pre-processing
@@ -50,6 +54,10 @@ Go to **SCP->Preprocessing->Sentinel-1**. Select the Sentinel-1 image previously
   :width: 700px
   :name: preprocessing-sentinel-1
 ```
+
+:::{note}
+A detailed explanation about SAR polarizations and their differences can be found in the following links: [[1]](https://nisar.jpl.nasa.gov/mission/get-to-know-sar/polarimetry/), [[2]](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-1-sar/product-overview/polarimetry).
+:::
 
 These processes are performed through the **SNAP Graph Processing Tool (GPT)** with a graph file **.xml**. 
 Therefore, the installation of [ESA SNAP](https://step.esa.int/main/toolboxes/snap/) is required for the pre-processing of Sentinel-1 images.

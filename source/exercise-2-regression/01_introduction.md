@@ -8,7 +8,7 @@
 
 ## Scope
 
-The following educational material has been produced within the framework of the [2020 OSGeo UN Committee Educational Challenge entitled “Challenge 1: Training on Satellite Data Analysis and Machine Learning with QGIS (Satellite_QGIS)”](https://www.osgeo.org/foundation-news/2021-osgeo-un-committee-educational-challenge/?fbclid=IwAR0UvwkPO2pay7C0tJawb63eewjBGfeL9TIQpYUFccza9OIo6HAolmHXLWE). The main purpose is to demonstrate the new functionalities made available in the QGIS platform, extended by its plugins for processing satellite data with Google Earth Engine (GEE).
+The following educational material has been produced within the framework of the [2021 OSGeo UN Committee Educational Challenge entitled “Challenge 1: Training on Satellite Data Analysis and Machine Learning with QGIS (Satellite_QGIS)”](https://www.osgeo.org/foundation-news/2021-osgeo-un-committee-educational-challenge/?fbclid=IwAR0UvwkPO2pay7C0tJawb63eewjBGfeL9TIQpYUFccza9OIo6HAolmHXLWE). The main purpose is to demonstrate the new functionalities made available in the QGIS platform, extended by its plugins for processing satellite data with Google Earth Engine (GEE).
 
 In this context, this tutorial proposes a methodology to get a trend of deforestation in the municipality São Félix do Xingu, located in Pará, Brazil. The GEE Timeseries Explorer plugin is employed to get acquainted with collections, filter date range and bands for historical data from one point (or a dot layer). Then, with the presented concepts, a python script will extend the analysis for a polygonal region of interest using the GEE resources to process and obtain a linear trend about the NDVI.
 

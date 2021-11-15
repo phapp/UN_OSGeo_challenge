@@ -10,10 +10,12 @@ So, the initial structure of our working directory is the following:
 +--- 2_Trends_Regression
 | +--- exercise2.qgz
 | +--- points.gpkg
+| +--- points.qml
 | +--- sao_felix_do_xingu.geojson
+| +--- sao_felix_do_xingu.qml
 ```
 
-The files used in this tutorial `points.gpkg` and `sao_felix_do_xingu.geojson` can be downloaded from [here](https://zenodo.org/record/5511994).
+The files used in this tutorial `points.gpkg` and `sao_felix_do_xingu.geojson` and their styles (qml files) can be downloaded from [here](https://zenodo.org/record/5511994).
 
 ## Select area of study
 
@@ -32,7 +34,7 @@ Our study area is a municipality called São Félix do Xingu, in the state of Pa
   Layers from the 2 initial files.
 ```
 
-São Félix do Xingu is the focus of this tutorial, thus you can load the files `points.gpkg` and `sao_felix_do_xingu.geojson` to the project. We will monitor the deforestation trend of this area from 2017 to 2020.
+São Félix do Xingu is the focus of this tutorial, thus you can load the files `points.gpkg` and `sao_felix_do_xingu.geojson` to the project. We will monitor the deforestation trend of this area from 2017 to 2021.
 
 In order to see the point labels (P1, P2 and P3), we need to choose the `Single Labels` option and `Name` as **attribute value** in Labels menu from Layer Properties of our Layer `points`.
 
@@ -55,6 +57,7 @@ With respect to the points, you can create random sample points or draw specific
 We are going to work with Landsat 8 images. For using GEE to process algorithms in the cloud, you will need an account in Google Earth Engine.
 
 In case you do not have an account:
+
 1. Go to [this link](https://signup.earthengine.google.com).
 2. Complete the form and submit the requested information to create an account.
 
@@ -77,7 +80,8 @@ Remember to save the **username** and **password** as we will need them later.
 ## Setting the plugins
 
 Go to `Plugins ► Manage and Install Plugins` menu. You will need to install 2 plugins:
-1. Google Earth Engine 
+
+1. Google Earth Engine
 2. GEE Timeseries Explorer (requirement: Google Earth Engine plugin)
 
 ### Google Earth Engine Plugin
@@ -116,4 +120,3 @@ Search and install in QGIS/Plugins: GEE Timeseries Explorer
 .. figure:: ../_static/img_ex2/gee_ts.png
   :width: 600px
 ```
-

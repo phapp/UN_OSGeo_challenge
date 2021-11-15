@@ -31,6 +31,10 @@ Huascarán mountain is the focus of this tutorial, where with the help of Quantu
   Huascarán mountain, the highest point in Peru (elevation: 6768 meters).
 ```
 
+:::{note}
+At this point of the tutorial, any area of study could be selected for different applications. You just need to take into account the availability of images without snow (in case of optical images) and the historical data.
+:::
+
 ## Create account for Earth Explorer
 
 We are going to work with [Landsat 8](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-8?qt-science_support_page_related_con=0#) images, so it is necessary to have an account to download Landsat products.
